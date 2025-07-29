@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Button, TextField } from '@mui/material'
 
 interface SettingsProps {
-  setSettings: (key: any, value: any) => void,
+  setSettings: (key: any, value: any) => void
   setOpenStream: React.Dispatch<React.SetStateAction<boolean>>
 }
 
@@ -23,10 +23,10 @@ function MostStream({ setSettings, setOpenStream }: SettingsProps) {
 
   const handleSave = () => {
     let parsedNumeric = {}
-    for(const [k, v] of Object.entries(stream)) {
+    for (const [k, v] of Object.entries(stream)) {
       parsedNumeric[k] = parseInt(v)
     }
-    setSettings('most', {stream: {...parsedNumeric}})
+    setSettings('most', { stream: { ...parsedNumeric } })
     setSettings('piMost', true)
     setOpenStream(false)
   }

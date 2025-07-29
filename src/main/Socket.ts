@@ -1,7 +1,7 @@
-import { ExtraConfig } from "./Globals";
+import { ExtraConfig } from './Globals'
 import { Server } from 'socket.io'
 import { EventEmitter } from 'events'
-import { Stream } from "socketmost/dist/modules/Messages";
+import { Stream } from 'socketmost/dist/modules/Messages'
 
 export enum MessageNames {
   Connection = 'connection',
